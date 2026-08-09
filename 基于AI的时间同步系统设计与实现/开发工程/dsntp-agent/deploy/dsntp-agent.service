@@ -1,0 +1,16 @@
+[Unit]
+Description=DSNTP Distributed Time Consensus Agent
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/dsntp-agent -c /etc/dsntp/agent.conf
+Restart=on-failure
+# 实时调度建议（需权限）：
+# CPUSchedulingPolicy=fifo
+# CPUSchedulingPriority=90
+# CPUAffinity=2
+# LimitMEMLOCK=infinity
+
+[Install]
+WantedBy=multi-user.target

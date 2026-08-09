@@ -1,0 +1,10 @@
+build/
+*.o
+dsntp-agent
+dsntp-agent.exe
+test_smoke
+test_smoke.exe
+keys/
+*.pem
+.vscode/
+.idea/
