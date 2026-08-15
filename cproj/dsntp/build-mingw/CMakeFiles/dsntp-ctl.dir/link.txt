@@ -1,0 +1,3 @@
+D:\dsntp\cproj\dsntp\.tools\cmake\cmake-3.31.6-windows-x86_64\bin\cmake.exe -E rm -f CMakeFiles\dsntp-ctl.dir/objects.a
+D:\dsntp\cproj\dsntp\.tools\w64devkit\bin\ar.exe qc CMakeFiles\dsntp-ctl.dir/objects.a @CMakeFiles\dsntp-ctl.dir\objects1.rsp
+D:\dsntp\cproj\dsntp\.tools\w64devkit\bin\gcc.exe -Wl,--whole-archive CMakeFiles\dsntp-ctl.dir/objects.a -Wl,--no-whole-archive -o dsntp-ctl.exe -Wl,--out-implib,libdsntp-ctl.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\dsntp-ctl.dir\linkLibs.rsp

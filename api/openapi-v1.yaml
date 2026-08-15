@@ -1,0 +1,58 @@
+openapi: 3.0.3
+info:
+  title: DSNTP Time Control Server HTTP API
+  version: 0.1.0
+  description: |
+    IF-CTL HTTP 面（DRS-002 §9.2）。端口默认 8080。
+    红线：不得改写 Agent 共识 Tc；Server 宕机不得要求停共识。
+servers:
+  - url: http://127.0.0.1:8080
+paths:
+  /api/v1/health:
+    get:
+      summary: 健康检查
+      responses:
+        "200":
+          description: ok
+  /api/v1/nodes:
+    get:
+      summary: IF-CTL-004 节点列表与最新状态
+      responses:
+        "200":
+          description: node list
+  /api/v1/nodes/{id}/metrics:
+    get:
+      summary: IF-CTL-005 历史曲线
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "200":
+          description: metrics series
+  /api/v1/config/publish:
+    post:
+      summary: IF-CTL-006 发布配置版本
+      responses:
+        "202":
+          description: accepted
+  /api/v1/nodes/{id}/ext-sync:
+    post:
+      summary: IF-CTL-007 触发 Ext_Sync
+      parameters:
+        - name: id
+          in: path
+          required: true
+          schema:
+            type: integer
+      responses:
+        "202":
+          description: queued
+  /api/v1/events:
+    get:
+      summary: IF-CTL-008 审计与事件查询
+      responses:
+        "200":
+          description: events

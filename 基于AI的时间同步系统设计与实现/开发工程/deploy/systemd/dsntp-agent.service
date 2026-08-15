@@ -1,0 +1,15 @@
+[Unit]
+Description=DSNTP Consensus Agent
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/dsntp-agent -c /etc/dsntp/agent.conf
+Restart=on-failure
+RestartSec=2
+LimitMEMLOCK=infinity
+# 建议生产：CPUAffinity= / AmbientCapabilities=CAP_SYS_NICE
+
+[Install]
+WantedBy=multi-user.target

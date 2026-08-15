@@ -1,0 +1,11 @@
+[Unit]
+Description=DSNTP Time Control Server (HTTP stub)
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/dsntp-ctl -p 8080
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

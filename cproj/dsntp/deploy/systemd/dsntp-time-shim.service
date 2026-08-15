@@ -1,0 +1,12 @@
+[Unit]
+Description=DSNTP time-shim for chrony
+After=network.target dsntp-agent.service
+Requires=dsntp-agent.service
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/dsntp-time-shim --agent-sock /var/run/time-agent.sock
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target

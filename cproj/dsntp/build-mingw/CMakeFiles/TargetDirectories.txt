@@ -1,0 +1,12 @@
+D:/dsntp/cproj/dsntp/build-mingw/CMakeFiles/dsntp_core.dir
+D:/dsntp/cproj/dsntp/build-mingw/CMakeFiles/dsntp-agent.dir
+D:/dsntp/cproj/dsntp/build-mingw/CMakeFiles/dsntp-time-shim.dir
+D:/dsntp/cproj/dsntp/build-mingw/CMakeFiles/dsntp-ctl.dir
+D:/dsntp/cproj/dsntp/build-mingw/CMakeFiles/test_smoke.dir
+D:/dsntp/cproj/dsntp/build-mingw/CMakeFiles/test.dir
+D:/dsntp/cproj/dsntp/build-mingw/CMakeFiles/edit_cache.dir
+D:/dsntp/cproj/dsntp/build-mingw/CMakeFiles/rebuild_cache.dir
+D:/dsntp/cproj/dsntp/build-mingw/CMakeFiles/list_install_components.dir
+D:/dsntp/cproj/dsntp/build-mingw/CMakeFiles/install.dir
+D:/dsntp/cproj/dsntp/build-mingw/CMakeFiles/install/local.dir
+D:/dsntp/cproj/dsntp/build-mingw/CMakeFiles/install/strip.dir

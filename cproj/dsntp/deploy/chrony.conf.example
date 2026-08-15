@@ -1,0 +1,9 @@
+# DSNTP chrony example (gateway role)
+# Consume only local synthetic time via time-shim SOCK — never external NTP.
+
+# server 127.0.0.1 iburst   # DO NOT use public pools
+# refclock SOCK /var/run/chrony.dsntp.sock
+
+allow 10.0.0.0/8
+local stratum 8
+manual

@@ -1,0 +1,12 @@
+[Unit]
+Description=DSNTP Consensus Agent
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/dsntp-agent -c /etc/dsntp/agent.conf
+Restart=on-failure
+# M6: CPUSchedulingPolicy=fifo ; CPUAffinity= ; LimitMEMLOCK=infinity
+
+[Install]
+WantedBy=multi-user.target

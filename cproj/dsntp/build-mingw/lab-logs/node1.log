@@ -1,0 +1,24 @@
+dsntp-agent starting (cproj/dsntp skeleton, DRS-002)
+[dsntp-agent] node=1 state=SyncWait port=47501 peers=2
+[dsntp-agent] round=1 state=Collecting tc=0 synced=889027473121 samples=0
+[dsntp-agent] peer timeout 127.0.0.1:47502 (suspect)
+[dsntp-agent] peer timeout 127.0.0.1:47503 (suspect)
+[dsntp-agent] round=1 state=Consensus tc=0 synced=892740898121 samples=1
+[dsntp-agent] samples=1 < 2f+1; keep previous Tc
+[dsntp-agent] round=1 state=Estimating tc=0 synced=895612769021 samples=1
+[dsntp-agent] round=1 state=Running tc=0 synced=897657180021 samples=1
+[dsntp-agent] round=1 state=SyncWait tc=0 synced=900432678021 samples=1
+[dsntp-agent] round=2 state=Collecting tc=0 synced=903929078121 samples=1
+[dsntp-agent] peer timeout 127.0.0.1:47502 (suspect)
+[dsntp-agent] peer timeout 127.0.0.1:47503 (suspect)
+[dsntp-agent] round=2 state=Consensus tc=0 synced=907319799221 samples=1
+[dsntp-agent] samples=1 < 2f+1; keep previous Tc
+[dsntp-agent] round=2 state=Estimating tc=0 synced=907557866721 samples=1
+[dsntp-agent] round=2 state=Running tc=0 synced=908032966921 samples=1
+[dsntp-agent] round=2 state=SyncWait tc=0 synced=908597643021 samples=1
+[dsntp-agent] round=3 state=Collecting tc=0 synced=909695350621 samples=1
+[dsntp-agent] round=3 state=Consensus tc=0 synced=909741724821 samples=3
+[dsntp-agent] consensus ACK quorum not met (agree=1)
+[dsntp-agent] round=3 state=Estimating tc=909740368021 synced=909855332521 samples=3
+[dsntp-agent] round=3 state=Running tc=909740368021 synced=909862085371 samples=3
+[dsntp-agent] round=3 state=SyncWait tc=909740368021 synced=18446742166117236787 samples=3

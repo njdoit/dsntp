@@ -1,0 +1,14 @@
+[Unit]
+Description=DSNTP Time Control Server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+ExecStart=/usr/local/bin/dsntp-ctl
+Restart=on-failure
+RestartSec=3
+# 红线：本服务宕机不得导致 Agent 停共识（Agent 侧本地缓存）
+
+[Install]
+WantedBy=multi-user.target

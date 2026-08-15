@@ -1,0 +1,9 @@
+# 网络摄像机 NTP/SNTP 开局清单（示例）
+# ONVIF SetNTP 或 Web UI：
+#   Primary NTP:   <GW_PRIMARY>
+#   Secondary NTP: <GW_STANDBY>
+#   Mode: NTP / SNTP
+#   Interval: 300～1800s
+# 禁止：pool.ntp.org / 运营商公网 NTP
+#
+# 验收：设备时间与网关偏差；>500ms 警告，>2s 严重（NFR-PERF-007）

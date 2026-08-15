@@ -1,0 +1,10 @@
+# Ignore build artifacts
+build/
+.tools/
+cmake-build-*/
+*.o
+*.a
+*.exe
+.DS_Store
+keys/
+*.pem

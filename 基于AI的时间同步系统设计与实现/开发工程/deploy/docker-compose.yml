@@ -1,0 +1,25 @@
+# DSNTP 系统联调 Compose（骨架）
+# 用途：在单机模拟管控面 + 文档化服务依赖；真实 P2P 仍建议物理/多 VM 部署。
+#
+# 红线提醒：
+# - 本文件不启动真实 UDP 47500 多节点共识环（需 host 网络或多机）
+# - 管控与 NTP 不得改写 Agent 共识 Tc
+
+services:
+  ctl:
+    image: golang:1.22
+    working_dir: /src/dsntp-ctl
+    volumes:
+      - ../:/src
+    command: ["go", "run", "./cmd/server"]
+    ports:
+      - "50051:50051"
+      - "8080:8080"
+    environment:
+      DSNTP_CTL_HTTP: ":8080"
+      DSNTP_CTL_GRPC: ":50051"
+
+  # Agent / NTP 网关通常跑在真实节点；此处仅保留文档化占位服务名
+  # agent-gw:
+  #   network_mode: host
+  #   ...
